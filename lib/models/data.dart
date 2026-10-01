@@ -26,6 +26,7 @@ class Product {
   int likeCount;
   int stock;
   List<String> sizes;
+  bool isFavorite;
 
   Product({
     required this.id,
@@ -37,6 +38,7 @@ class Product {
     required this.likeCount,
     required this.stock,
     required this.sizes,
+    this.isFavorite = false,
   });
 }
 
@@ -46,10 +48,8 @@ final List<Product> catalog = [
     productName: "AIRism Cotton Oversized T-Shirt",
     type: "T-Shirt",
     price: "Rp199.000",
-    imageUrl:
-        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab",
-    details:
-        "Kaos oversized dengan bahan nyaman dan cocok digunakan untuk aktivitas sehari-hari.",
+    imageUrl: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab",
+    details: "Kaos oversized dengan bahan nyaman dan cocok digunakan untuk aktivitas sehari-hari.",
     likeCount: 28,
     stock: 35,
     sizes: ["S", "M", "L", "XL"],
@@ -60,10 +60,8 @@ final List<Product> catalog = [
     productName: "Crew Neck Short Sleeve T-Shirt",
     type: "T-Shirt",
     price: "Rp149.000",
-    imageUrl:
-        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab",
-    details:
-        "Kaos dengan desain sederhana yang mudah dipadukan dengan berbagai jenis pakaian.",
+    imageUrl: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab",
+    details: "Kaos dengan desain sederhana yang mudah dipadukan dengan berbagai jenis pakaian.",
     likeCount: 19,
     stock: 42,
     sizes: ["S", "M", "L", "XL"],
@@ -74,10 +72,8 @@ final List<Product> catalog = [
     productName: "Graphic Print T-Shirt",
     type: "T-Shirt",
     price: "Rp299.000",
-    imageUrl:
-        "https://images.unsplash.com/photo-1503341504253-dff4815485f1",
-    details:
-        "Kaos dengan desain grafis modern untuk memberikan tampilan casual dan stylish.",
+    imageUrl: "https://images.unsplash.com/photo-1503341504253-dff4815485f1",
+    details: "Kaos dengan desain grafis modern untuk memberikan tampilan casual dan stylish.",
     likeCount: 36,
     stock: 27,
     sizes: ["S", "M", "L"],
@@ -88,10 +84,8 @@ final List<Product> catalog = [
     productName: "Ultra Light Down Jacket",
     type: "Jacket",
     price: "Rp999.000",
-    imageUrl:
-        "https://images.unsplash.com/photo-1548883354-94bcfe321cbb",
-    details:
-        "Jaket ringan dengan desain praktis yang dapat digunakan untuk berbagai aktivitas.",
+    imageUrl: "https://images.unsplash.com/photo-1548883354-94bcfe321cbb",
+    details: "Jaket ringan dengan desain praktis yang dapat digunakan untuk berbagai aktivitas.",
     likeCount: 47,
     stock: 18,
     sizes: ["S", "M", "L", "XL"],
@@ -102,10 +96,8 @@ final List<Product> catalog = [
     productName: "Fleece Full-Zip Jacket",
     type: "Jacket",
     price: "Rp599.000",
-    imageUrl:
-        "https://images.unsplash.com/photo-1551028719-00167b16eac5",
-    details:
-        "Jaket berbahan fleece yang lembut dan memberikan rasa hangat saat digunakan.",
+    imageUrl: "https://images.unsplash.com/photo-1551028719-00167b16eac5",
+    details: "Jaket berbahan fleece yang lembut dan memberikan rasa hangat saat digunakan.",
     likeCount: 32,
     stock: 23,
     sizes: ["M", "L", "XL"],
@@ -116,10 +108,8 @@ final List<Product> catalog = [
     productName: "Wide Straight Jeans",
     type: "Pants",
     price: "Rp599.000",
-    imageUrl:
-        "https://images.unsplash.com/photo-1542272604-787c3835535d",
-    details:
-        "Celana jeans dengan potongan wide straight yang memberikan tampilan modern.",
+    imageUrl: "https://images.unsplash.com/photo-1542272604-787c3835535d",
+    details: "Celana jeans dengan potongan wide straight yang memberikan tampilan modern.",
     likeCount: 41,
     stock: 31,
     sizes: ["28", "30", "32", "34"],
@@ -130,10 +120,8 @@ final List<Product> catalog = [
     productName: "Smart Ankle Pants",
     type: "Pants",
     price: "Rp499.000",
-    imageUrl:
-        "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80",
-    details:
-        "Celana dengan desain clean dan modern yang cocok untuk tampilan casual maupun formal.",
+    imageUrl: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80",
+    details: "Celana dengan desain clean dan modern yang cocok untuk tampilan casual maupun formal.",
     likeCount: 25,
     stock: 26,
     sizes: ["28", "30", "32", "34"],
@@ -144,10 +132,8 @@ final List<Product> catalog = [
     productName: "Round Mini Shoulder Bag",
     type: "Bag",
     price: "Rp299.000",
-    imageUrl:
-        "https://images.unsplash.com/photo-1594223274512-ad4803739b7c",
-    details:
-        "Tas bahu berukuran compact dengan desain minimalis untuk menemani aktivitas sehari-hari.",
+    imageUrl: "https://images.unsplash.com/photo-1594223274512-ad4803739b7c",
+    details: "Tas bahu berukuran compact dengan desain minimalis untuk menemani aktivitas sehari-hari.",
     likeCount: 33,
     stock: 15,
     sizes: ["One Size"],
@@ -158,10 +144,8 @@ final List<Product> catalog = [
     productName: "UV Protection Cap",
     type: "Accessories",
     price: "Rp199.000",
-    imageUrl:
-        "https://images.unsplash.com/photo-1588850561407-ed78c282e89b",
-    details:
-        "Topi dengan desain casual yang cocok digunakan sebagai pelengkap berbagai gaya.",
+    imageUrl: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b",
+    details: "Topi dengan desain casual yang cocok digunakan sebagai pelengkap berbagai gaya.",
     likeCount: 22,
     stock: 20,
     sizes: ["One Size"],
