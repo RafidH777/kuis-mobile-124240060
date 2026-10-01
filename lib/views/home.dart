@@ -118,7 +118,8 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       title: Text(product.productName),
-                      subtitle: Text("${product.type} • ${product.price}"),
+                      subtitle: Text("${product.type} • ${product.price} • ${product.likeCount} Likes • Stok: ${product.stock} "),
+                      
                       trailing: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
